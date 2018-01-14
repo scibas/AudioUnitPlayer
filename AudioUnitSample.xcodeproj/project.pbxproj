@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5849AEA200BDEED00D7B977 /* AudioSessionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5849AE9200BDEED00D7B977 /* AudioSessionHelpers.swift */; };
 		E5B46A7B200B69440042B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A7A200B69440042B744 /* AppDelegate.swift */; };
 		E5B46A7D200B69440042B744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A7C200B69440042B744 /* ViewController.swift */; };
 		E5B46A8D200B6A8E0042B744 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A8C200B6A8E0042B744 /* MainView.swift */; };
+		E5DF5A2D200B703700162C45 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DF5A2C200B703700162C45 /* AudioEngine.swift */; };
+		E5DF5A2F200B726C00162C45 /* drumLoop.caf in Resources */ = {isa = PBXBuildFile; fileRef = E5DF5A2E200B726C00162C45 /* drumLoop.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5849AE9200BDEED00D7B977 /* AudioSessionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionHelpers.swift; sourceTree = "<group>"; };
 		E5B46A77200B69440042B744 /* AudioUnitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioUnitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B46A7A200B69440042B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B46A7C200B69440042B744 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5B46A86200B69440042B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5B46A8C200B6A8E0042B744 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E5DF5A2C200B703700162C45 /* AudioEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		E5DF5A2E200B726C00162C45 /* drumLoop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drumLoop.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,7 @@
 		E5B46A6E200B69440042B744 = {
 			isa = PBXGroup;
 			children = (
+				E5DF5A2E200B726C00162C45 /* drumLoop.caf */,
 				E5B46A79200B69440042B744 /* AudioUnitSample */,
 				E5B46A78200B69440042B744 /* Products */,
 			);
@@ -50,12 +57,22 @@
 		E5B46A79200B69440042B744 /* AudioUnitSample */ = {
 			isa = PBXGroup;
 			children = (
+				E5DF5A2B200B701B00162C45 /* UI */,
 				E5B46A7A200B69440042B744 /* AppDelegate.swift */,
-				E5B46A7C200B69440042B744 /* ViewController.swift */,
-				E5B46A8C200B6A8E0042B744 /* MainView.swift */,
+				E5DF5A2C200B703700162C45 /* AudioEngine.swift */,
+				E5849AE9200BDEED00D7B977 /* AudioSessionHelpers.swift */,
 				E5B46A86200B69440042B744 /* Info.plist */,
 			);
 			path = AudioUnitSample;
+			sourceTree = "<group>";
+		};
+		E5DF5A2B200B701B00162C45 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E5B46A7C200B69440042B744 /* ViewController.swift */,
+				E5B46A8C200B6A8E0042B744 /* MainView.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +108,7 @@
 					E5B46A76200B69440042B744 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 79N6H3W7G9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -118,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DF5A2F200B726C00162C45 /* drumLoop.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DF5A2D200B703700162C45 /* AudioEngine.swift in Sources */,
+				E5849AEA200BDEED00D7B977 /* AudioSessionHelpers.swift in Sources */,
 				E5B46A7D200B69440042B744 /* ViewController.swift in Sources */,
 				E5B46A8D200B6A8E0042B744 /* MainView.swift in Sources */,
 				E5B46A7B200B69440042B744 /* AppDelegate.swift in Sources */,
@@ -233,11 +254,14 @@
 		E5B46A8A200B69440042B744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 79N6H3W7G9;
 				INFOPLIST_FILE = AudioUnitSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.scibek.AudioUnitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -245,11 +269,13 @@
 		E5B46A8B200B69440042B744 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 79N6H3W7G9;
 				INFOPLIST_FILE = AudioUnitSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.scibek.AudioUnitSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -273,6 +299,7 @@
 				E5B46A8B200B69440042B744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

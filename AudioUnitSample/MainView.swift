@@ -4,10 +4,19 @@ class MainView: UIView {
 
     lazy var playButton: UIButton = {
         let playButton = UIButton()
+        playButton.translatesAutoresizingMaskIntoConstraints = false
         playButton.setTitle("Play", for: .normal)
         playButton.setTitleColor(.blue, for: .normal)
-        playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.setTitleColor(.lightGray, for: .highlighted)
         return playButton
+    }()
+    
+    lazy var slider: UISlider = {
+        let slider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        return slider
     }()
     
     override init(frame: CGRect) {
@@ -16,7 +25,8 @@ class MainView: UIView {
         backgroundColor = .white
         
         addSubview(playButton)
-        
+        addSubview(slider)
+    
         setupCustomConstraints()
     }
     
@@ -26,8 +36,12 @@ class MainView: UIView {
     
     private func setupCustomConstraints() {
         playButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        playButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        playButton.topAnchor.constraint(equalTo: topAnchor, constant: 50).isActive = true
         playButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
         playButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        slider.topAnchor.constraint(equalTo: playButton.bottomAnchor, constant: 50).isActive = true
+        slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50).isActive = true
+        slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50).isActive = true
     }
 }
