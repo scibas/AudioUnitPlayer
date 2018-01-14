@@ -9,19 +9,15 @@
 /* Begin PBXBuildFile section */
 		E5B46A7B200B69440042B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A7A200B69440042B744 /* AppDelegate.swift */; };
 		E5B46A7D200B69440042B744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A7C200B69440042B744 /* ViewController.swift */; };
-		E5B46A80200B69440042B744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B46A7E200B69440042B744 /* Main.storyboard */; };
-		E5B46A82200B69440042B744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B46A81200B69440042B744 /* Assets.xcassets */; };
-		E5B46A85200B69440042B744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B46A83200B69440042B744 /* LaunchScreen.storyboard */; };
+		E5B46A8D200B6A8E0042B744 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B46A8C200B6A8E0042B744 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5B46A77200B69440042B744 /* AudioUnitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioUnitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B46A7A200B69440042B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B46A7C200B69440042B744 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E5B46A7F200B69440042B744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E5B46A81200B69440042B744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E5B46A84200B69440042B744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5B46A86200B69440042B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5B46A8C200B6A8E0042B744 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +52,7 @@
 			children = (
 				E5B46A7A200B69440042B744 /* AppDelegate.swift */,
 				E5B46A7C200B69440042B744 /* ViewController.swift */,
-				E5B46A7E200B69440042B744 /* Main.storyboard */,
-				E5B46A81200B69440042B744 /* Assets.xcassets */,
-				E5B46A83200B69440042B744 /* LaunchScreen.storyboard */,
+				E5B46A8C200B6A8E0042B744 /* MainView.swift */,
 				E5B46A86200B69440042B744 /* Info.plist */,
 			);
 			path = AudioUnitSample;
@@ -124,9 +118,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B46A85200B69440042B744 /* LaunchScreen.storyboard in Resources */,
-				E5B46A82200B69440042B744 /* Assets.xcassets in Resources */,
-				E5B46A80200B69440042B744 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,30 +129,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B46A7D200B69440042B744 /* ViewController.swift in Sources */,
+				E5B46A8D200B6A8E0042B744 /* MainView.swift in Sources */,
 				E5B46A7B200B69440042B744 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E5B46A7E200B69440042B744 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5B46A7F200B69440042B744 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E5B46A83200B69440042B744 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5B46A84200B69440042B744 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E5B46A87200B69440042B744 /* Debug */ = {
@@ -260,7 +233,6 @@
 		E5B46A8A200B69440042B744 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 79N6H3W7G9;
 				INFOPLIST_FILE = AudioUnitSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -273,7 +245,6 @@
 		E5B46A8B200B69440042B744 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 79N6H3W7G9;
 				INFOPLIST_FILE = AudioUnitSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
